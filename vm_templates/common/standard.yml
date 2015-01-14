@@ -82,7 +82,7 @@ recipes:
   #
   - postgresql
   - redis
-  - riak
+  # - riak
   - mongodb
   - couchdb::ppa
   - memcached
