@@ -28,6 +28,8 @@
 
 - Update Scala to 2.11.5 and SBT to 0.13.7 (Gilles Cornu)
 
+- Add PostgreSQL 9.4 (Gilles Cornu)
+
 ### Production on .org on 09.12.2014
 
 - Update Android SDK Tools to 24.0.0 (@ardock)
