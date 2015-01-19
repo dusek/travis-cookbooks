@@ -21,6 +21,37 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-package "clang" do
-  action :install
+apt_repository "llvm" do
+  uri          "http://llvm.org/apt/#{node['lsb']['codename']}"
+  distribution "llvm-toolchain-#{node['lsb']['codename']}-#{node['clang']['version']}"
+  components   ["main"]
+  key          "http://llvm.org/apt/llvm-snapshot.gpg.key"
+  action       :add
+end
+
+packages = %w(
+  clang-%s
+  clang-%s-doc
+  libclang-common-%s-dev
+  libclang-%s-dev
+  libclang1-%s
+  libclang1-%s-dbg
+  libllvm-%s-ocaml-dev
+  libllvm%s
+  libllvm%s-dbg
+  lldb-%s
+  llvm-%s
+  llvm-%s-dev
+  llvm-%s-doc
+  llvm-%s-examples
+  llvm-%s-runtime
+  clang-modernize-%s
+  clang-format-%s
+  python-clang-%s
+  lldb-%s-dev
+).map { |x| x % node['clang']['version'] }
+
+execute "install clang-#{node['clang']['version']} packages" do
+  command "apt-get install #{packages.join(' ')}"
+  user 'root'
 end

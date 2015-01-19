@@ -24,6 +24,8 @@
 #
 # Download and setup clang tarball package
 #
+include_recipe 'clang::default'
+
 ark 'clang' do
   url           node['clang']['download_url']
   checksum      node['clang']['checksum']
