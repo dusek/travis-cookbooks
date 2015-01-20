@@ -29,6 +29,7 @@
 - Update Scala to 2.11.5 and SBT to 0.13.7 (Gilles Cornu)
 
 - Update Android SDK Tools to 24.0.2 (@ardock)
+- Add PostgreSQL 9.4 (Gilles Cornu)
 
 - io.js support via nvm (Jordan Harband)
 
