@@ -1,7 +1,7 @@
 json:
   rvm:
     latest_minor: true
-    default: 1.9.3
+    default: 2.1.5
     rubies:
       - name: 1.9.3
       - name: 1.8.7
