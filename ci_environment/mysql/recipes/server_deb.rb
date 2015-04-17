@@ -85,6 +85,10 @@ end
 service "mysql" do
   service_name value_for_platform([ "centos", "redhat", "suse", "fedora" ] => {"default" => "mysqld"}, "default" => "mysql")
 
+  if platform?("ubuntu")
+    provider Chef::Provider::Service::Init::Debian
+  end
+
   supports :status => true, :restart => true, :reload => true
   if node['mysql']['enabled']
     action :enable
