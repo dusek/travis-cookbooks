@@ -29,9 +29,11 @@ package "debconf-utils" do
   action :install
 end
 
-# for convenience of those who add various PPAs. MK.
-package "python3-software-properties" do
-  action :install
+case node['lsb']['codename']
+when 'precise'
+  package "python-software-properties"
+when 'trsuty'
+  package "python3-software-properties"
 end
 
 template "/etc/apt/sources.list" do
