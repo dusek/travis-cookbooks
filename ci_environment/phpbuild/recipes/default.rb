@@ -51,13 +51,15 @@ when "ubuntu", "debian"
     to "/usr/lib/#{node.phpbuild.arch}-linux-gnu/libldap.so"
   end
 
-  link '/usr/include/freetype' do
-    to '/usr/include/freetype2'
-    not_if "test -e /usr/include/freetype"
-  end
+  if node['lsb']['codename'] == 'trusty'
+    link '/usr/include/freetype' do
+      to '/usr/include/freetype2'
+      not_if "test -e /usr/include/freetype"
+    end
 
-  link '/usr/include/gmp.h' do
-    to "/usr/include/#{node.phpbuild.arch}-linux-gnu/gmp.h"
+    link '/usr/include/gmp.h' do
+      to "/usr/include/#{node.phpbuild.arch}-linux-gnu/gmp.h"
+    end
   end
 
   if node[:platform_version].to_f >= 12.04

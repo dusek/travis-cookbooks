@@ -4,7 +4,12 @@
 --with-gd
 --with-jpeg-dir=/usr
 --with-png-dir=/usr
+<% if node['lsb']['codename'] == 'precise' -%>
+--with-freetype-dir=/usr
+--with-freetype
+<% else -%>
 --with-freetype-dir=/usr/include/freetype2
+<% end -%>
 --enable-exif
 --enable-zip
 --with-zlib
