@@ -12,6 +12,8 @@ json:
   # Go
   gimme:
     versions: []
+  # Haskell
+  ghc: {}
 
   # Node.js
   nodejs:
