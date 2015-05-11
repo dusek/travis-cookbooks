@@ -22,6 +22,10 @@ json:
   perlbrew:
     perls: []
   # PHP
+  php:
+    multi:
+      versions: []
+    binaries: []
   composer:
     github_oauth_token: 2d8490a1060eb8e8a1ae9588b14e3a039b9e01c6
   # Python
