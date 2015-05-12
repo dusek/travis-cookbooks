@@ -9,6 +9,9 @@ json:
     use_tmpfs_for_builds: false
   java:
     alternate_versions: []
+  # Erlang
+  kiex:
+    elixir_versions: []
   # Go
   gimme:
     versions: []
@@ -107,12 +110,12 @@ recipes:
   #
   # Headless WebKit, browsers, Selenium toolchain, etc
   #
-  - xserver
-  - firefox::tarball
-  - chromium
-  - google-chrome
-  - phantomjs::tarball
-  - phantomjs::2.0
+  # - xserver
+  # - firefox::tarball
+  # - chromium
+  # - google-chrome
+  # - phantomjs::tarball
+  # - phantomjs::2.0
 
   # Android
   - java
@@ -155,7 +158,7 @@ recipes:
   #
   # Debugging & support
   #
-  - emacs::nox
-  - vim
+  # - emacs::nox
+  # - vim
   - system_info
   - sweeper
