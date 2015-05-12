@@ -139,7 +139,7 @@ recipes:
 
   # Node.js
   - nodejs::multi
-  - nodejs::iojs
+  # - nodejs::iojs
 
   # Perl
   - perlbrew::multi
