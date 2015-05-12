@@ -145,7 +145,7 @@ recipes:
   - perlbrew::multi
 
   # PHP
-  - php::multi
+  # - php::multi
 
   # Python
   - python::pyenv
