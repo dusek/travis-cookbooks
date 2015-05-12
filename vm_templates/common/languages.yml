@@ -149,8 +149,8 @@ recipes:
 
   # Python
   - python::pyenv
-  - python::system
-  - python::devshm
+  # - python::system
+  # - python::devshm
 
   #
   # Debugging & support
