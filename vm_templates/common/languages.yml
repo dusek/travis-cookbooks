@@ -130,7 +130,7 @@ recipes:
   - gimme
 
   # Haskell
-  - haskell::multi
+  # - haskell::multi
 
   # JVM
   - leiningen
