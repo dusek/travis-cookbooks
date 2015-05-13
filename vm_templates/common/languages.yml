@@ -91,10 +91,6 @@ recipes:
   - ant
   - maven
   #
-  # Needs to be installed before RVM
-  #
-  - sqlite
-  #
   # Ruby via RVM (default Debian installations are secure at the cost of
   # being unusable without PATH tweaking, for our VMs we can just go with RVM.
   # This includes rubygems, bundler and rake.
@@ -105,8 +101,8 @@ recipes:
   #
   # Python and pip
   #
-  - python
-  - python::pip
+  # - python
+  # - python::pip
   #
   # Node.js
   #
@@ -123,16 +119,13 @@ recipes:
   # - phantomjs::2.0
 
   # Android
-  - java
-  - ant
-  - maven
-  - gradle::tarball
-  - android-sdk
+  # - gradle::tarball
+  # - android-sdk
 
   # Erlang
-  - kerl
-  - kiex
-  - rebar
+  # - kerl
+  # - kiex
+  # - rebar
 
   # Go
   - gimme
@@ -141,16 +134,16 @@ recipes:
   # - haskell::multi
 
   # JVM
-  - leiningen
-  - sbt-extras
-  - gradle::tarball
+  # - leiningen
+  # - sbt-extras
+  # - gradle::tarball
 
   # Node.js
-  - nodejs::multi
+  # - nodejs::multi
   # - nodejs::iojs
 
   # Perl
-  - perlbrew::multi
+  # - perlbrew::multi
 
   # PHP
   # - php::multi
