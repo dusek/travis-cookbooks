@@ -10,6 +10,8 @@ json:
   java:
     alternate_versions: []
   # Erlang
+  kerl:
+    releases: []
   kiex:
     elixir_versions: []
   # Go
