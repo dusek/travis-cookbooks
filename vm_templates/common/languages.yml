@@ -9,6 +9,9 @@ json:
     use_tmpfs_for_builds: false
   java:
     alternate_versions: []
+  # Android
+  android-sdk:
+    components: []
   # Erlang
   kerl:
     releases: []
